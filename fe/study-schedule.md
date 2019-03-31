@@ -66,4 +66,5 @@
 書籍：[柏木先生の基本情報技術者教室](https://www.amazon.co.jp/dp/B0784TT99J)   
 ※平成27年度版 Amazonで1円だった
 
-過去問：
+過去問：https://www.fe-siken.com/fekakomon.php  
+ここで過去問やる
