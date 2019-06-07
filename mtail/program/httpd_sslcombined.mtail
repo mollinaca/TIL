@@ -1,0 +1,57 @@
+# 参考：https://github.com/google/mtail/blob/master/examples/apache_combined.mtail
+# 独自 apache log(ltsv)用のmtailプログラム
+#
+# ※作りかけ※
+#
+## LogFormat sslcombined by mollinaca ##
+# LogFormat
+# "datetime:%{%d/%b/%Y:%H:%M:%S %z}t\t
+# remote_host:%h\t
+# x_forwarded_for:%{X-Forwarded-For}i\t
+# method:%m\t
+# path:%U%q\t
+# protocol:%H\t
+# status:%>s\t
+# size:%b\t
+# referer:"%{Referer}i"\t
+# agent:"%{User-Agent}i"\t
+# response_time:%D\t
+# cookie:"%{cookie}i"\t
+# set_cookie:"%{Set-Cookie}o"\t
+# SSL_PROTOCOL:%{SSL_PROTOCOL}x\t
+# SSL_CIPHER:%{SSL_CIPHER}x" sslcombined
+#
+
+counter mtail_httpd_sslcombined_line_counter
+#counter mtail_httpd_sslcombined_method_total by method
+#counter mtail_httpd_sslcombined_path_total by path
+#counter mtail_httpd_sslcombined_protocol_total by protocol
+#counter mtail_httpd_sslcombined_status_total by status
+#counter mtail_httpd_sslcombined_SSL_PROTOCOL_total by SSL_PROTOCOL
+#counter mtail_httpd_sslcombined_SSL_CIPHER_total by SSL_CIPHER
+
+/^/+
+#datetime:                07   /  Jun / 2019: 11  : 58  :  59    +     0900
+/datetime:(?P<datetime>\d{2}\/\w{3}\/\d{4}:\d{2}:\d{2}:\d{2} (\+|-)\d{4})\t/+
+/remote_host:(?P<remote_host>\d+\.\d+\.\d+\.\d+)\t/+
+/x_forwaded_for:(?P<x_forwarded_for>\d+\.\d+\.\d+\.\d+|-)\t/+
+/method:(?P<method>[A-Z]+)\t/+
+/path:(?P<path>\S+)\t/+
+/protocol:(?P<protocol>HTTP\/[0-9\.]+)\t/+
+/status:(?P<status>\d{3})/+
+/size:((?P<size>\d+)|-)\t/+
+/referer:"((?P<referer>\S+)|-)"\t/+
+/agent:"(?P<agent>[[:print:]]+)"\t/+
+/response_time:(?P<response_time>\d+)/+
+/cookie:"(?P<cookie>[[:print:]]+)"\t/+
+/SSL_PROTOCOL:(?P<SSL_PROTOCOL>[0-9a-zA-Z\.]+)\t/+
+/SSL_CIPHER:(?P<SSL_CIPHER>[0-9A-Z\-]+)/+
+/$/ {
+  mtail_httpd_sslcombined_line_counter++
+  mtail_httpd_sslcombined_method_total[$method]++
+  mtail_httpd_sslcombined_path_total[$path]++
+  mtail_httpd_sslcombined_protocol_total[$protocol]++
+  mtail_httpd_sslcombined_status_total[$status]++
+  mtail_httpd_sslcombined_SSL_PROTOCOL_total[$SSL_PROTOCOL]++
+  mtail_httpd_sslcombined_SSL_CIPHER_total[$SSL_CIPHER]++
+}
