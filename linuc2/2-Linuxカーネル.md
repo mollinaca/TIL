@@ -5,9 +5,9 @@
 
 ### 確認コマンド
 
-* # uname -[a|r|m]
-* # cat /proc/version
-* # head /usr/src/kernels/[version]/Makefile
+* uname -[a|r|m]
+* cat /proc/version
+* head /usr/src/kernels/[version]/Makefile
 
 ### カーネルモジュール
 
