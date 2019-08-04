@@ -15,7 +15,7 @@ FEのときの残骸: https://github.com/mollinaca/til/tree/master/fe
 
 # 範囲内容確認 & 目標と実績
 
-* 目標: ~ 8/4
+* 目標: ~ 8/12
 * 実績:
 
 ## 第1章 基礎理論
@@ -36,7 +36,7 @@ FEのときの残骸: https://github.com/mollinaca/til/tree/master/fe
 
 ## 第2章 アルゴリズムとプログラミング
 
-* 目標: ~ 8/12
+* 目標: ~ 8/18
 * 実績:
 
 ### 2.1 リスト
@@ -55,7 +55,7 @@ FEのときの残骸: https://github.com/mollinaca/til/tree/master/fe
 
 ## 第3章 ハードウェアとコンピュータ構成要素
 
-* 目標: ~ 8/18
+* 目標: ~ 8/25
 * 実績:
 
 ### 3.1 ハードウェア
@@ -70,7 +70,7 @@ FEのときの残骸: https://github.com/mollinaca/til/tree/master/fe
 
 ## 第4章 システム構成要素
 
-* 目標: ~ 8/18
+* 目標: ~ 8/25
 * 実績:
 
 ### 4.1 システムの処理形態
@@ -89,7 +89,7 @@ FEのときの残骸: https://github.com/mollinaca/til/tree/master/fe
 
 ## 第5章 ソフトウェア
 
-* 目標: ~ 8/25
+* 目標: ~ 9/1
 * 実績:
 
 ### 5.1 OSの構成と機能
@@ -106,7 +106,7 @@ FEのときの残骸: https://github.com/mollinaca/til/tree/master/fe
 
 ## 第6章 データベース
 
-* 目標: ~ 9/1
+* 目標: ~ 9/8
 * 実績:
 
 ### 6.1 データベースの基礎
@@ -131,7 +131,7 @@ FEのときの残骸: https://github.com/mollinaca/til/tree/master/fe
 
 ## 第7章 ネットワーク
 
-* 目標: ~ 9/8
+* 目標: ~ 9/15
 * 実績:
 
 ### 7.1 通信プロトコルの標準化
@@ -152,7 +152,7 @@ FEのときの残骸: https://github.com/mollinaca/til/tree/master/fe
 
 ## 第8章 セキュリティ
 
-* 目標: ~ 9/15
+* 目標: ~ 9/22
 * 実績:
 
 ### 8.1 暗号化
@@ -171,7 +171,7 @@ FEのときの残骸: https://github.com/mollinaca/til/tree/master/fe
 
 ## 第9章 システム開発技術
 
-* 目標: ~ 9/22
+* 目標: ~ 9/29
 * 実績:
 
 ### 9.1 開発プロセス・手法
@@ -190,7 +190,7 @@ FEのときの残骸: https://github.com/mollinaca/til/tree/master/fe
 
 ## 第10章 マネジメント
 
-* 目標: ~ 9/29
+* 目標: ~ 10/6
 * 実績:
 
 ### 10.1 プロジェクトマネジメント
@@ -207,7 +207,7 @@ FEのときの残骸: https://github.com/mollinaca/til/tree/master/fe
 
 ## 第11章 ストラテジ
 
-* 目標: ~ 9/29
+* 目標: ~ 10/6
 * 実績:
 
 ### 11.1 システム戦略
