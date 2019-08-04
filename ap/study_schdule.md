@@ -1,5 +1,4 @@
-
-# 範囲とスケジュール
+# 範囲とスケジュールについて
 
 ## 方針
 
@@ -7,16 +6,16 @@
 
 2019/08 - 2019/09下旬までの2ヵ月弱を目安に、全範囲の内容を再確認する  
 基本的な内容は基本情報と変わらないぽいので、表面をさらさら舐めていくでOK  
-https://github.com/mollinaca/til/tree/master/fe 
+FEのときの残骸: https://github.com/mollinaca/til/tree/master/fe
 
 ### 問題演習&過去問 ⇒ 3週間程度
 
 2019/09下旬から10月試験日まで
-過去問： https://www.jitec.ipa.go.jp/1_04hanni_sukiru/_index_mondai.html
+公式過去問: https://www.jitec.ipa.go.jp/1_04hanni_sukiru/_index_mondai.html
 
 # 範囲内容確認 & 目標と実績
 
-* 目標: ~ 8/4 
+* 目標: ~ 8/4
 * 実績:
 
 ## 第1章 基礎理論
