@@ -15,3 +15,5 @@ https://www.jitec.ipa.go.jp/1_02annai/r01aki_exam.html
 
 参考書：応用情報技術者 合格教本(技術評論社) https://gihyo.jp/book/2018/978-4-297-10197-8    
 これで全体さっくり舐めつつ、別途練習問題&過去問やる
+
+過去問： https://www.jitec.ipa.go.jp/1_04hanni_sukiru/_index_mondai.html
