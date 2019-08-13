@@ -13,6 +13,8 @@ FEのときの残骸: https://github.com/mollinaca/til/tree/master/fe
 
 2019/09下旬から10月試験日まで
 公式過去問: https://www.jitec.ipa.go.jp/1_04hanni_sukiru/_index_mondai.html
+過去問同上: https://www.ap-siken.com/apkakomon.php
+
 
 # 範囲内容確認 & 目標と実績
 
