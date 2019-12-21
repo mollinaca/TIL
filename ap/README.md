@@ -17,3 +17,7 @@ https://www.jitec.ipa.go.jp/1_02annai/r01aki_exam.html
 これで全体さっくり舐めつつ、別途練習問題&過去問やる
 
 過去問： https://www.jitec.ipa.go.jp/1_04hanni_sukiru/_index_mondai.html
+
+## 合格発表
+
+20191220 無事合格:clap: 
