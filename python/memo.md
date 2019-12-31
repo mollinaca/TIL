@@ -4,6 +4,7 @@
 
 https://qiita.com/_-_-_-_-_/items/34f933adc7be875e61d0
 https://qiita.com/y-tsutsu/items/aa7e8e809d6ac167d6a1
+https://qiita.com/kyuna/items/8ee8916c2f4e36321a1c
 https://note.nkmk.me/python-str-extract/
 
 ## 標準入力を受け取る
