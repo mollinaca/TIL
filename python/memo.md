@@ -24,10 +24,15 @@ a, b = map(str, input().split())
 a, b = map(int, input().split())
 ```
 
-個数がわからない、たくさん → list
+個数がわかるがたくさん → list
 ```
-str_list = [str(i) for i in input().split()] 
-n_list = [int(i) for i in input().split()] 
+d_list = [int(input()) for d_list in range(n)]
+```
+
+個数がわからない → list
+```
+str_list = [str(i) for str_list in input().split()] 
+n_list = [int(i) for n_list in input().split()] 
 ```
 
 ## 標準出力
