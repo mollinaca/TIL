@@ -18,21 +18,29 @@ n=int(input().rstrip())
 
 ### 複数の文字列
 
-個数がわかる → それぞれの変数
+* 個数がわかる → それぞれの変数
 ```
 a, b = map(str, input().split())
 a, b = map(int, input().split())
 ```
 
-個数がわかるがたくさん → list
+* 個数がわかるがたくさん → list
 ```
 d_list = [int(input()) for d_list in range(n)]
 ```
 
-個数がわからない → list
+* 個数がわからない → list
 ```
 str_list = [str(i) for str_list in input().split()] 
 n_list = [int(i) for n_list in input().split()] 
+```
+
+* n回の繰り返しで複数の文字列を取得しながら処理
+```
+for _ in range(n):
+    a, b = map(str, input().split())
+    d = [int(input()) for d in range(n)]
+    # 処理...
 ```
 
 ## 標準出力
