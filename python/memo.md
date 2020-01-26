@@ -26,6 +26,7 @@ a, b = map(int, input().split())
 
 * 個数がわかるがたくさん → list
 ```
+n = int(input())
 d_list = [int(input()) for d_list in range(n)]
 ```
 
@@ -37,6 +38,7 @@ n_list = [int(i) for n_list in input().split()]
 
 * n回の繰り返しで複数の文字列を取得しながら処理
 ```
+n = int(input())
 for _ in range(n):
     a, b = map(str, input().split())
     d = [int(input()) for d in range(n)]
