@@ -32,8 +32,8 @@ d_list = [int(input()) for d_list in range(n)]
 
 * 個数がわからない → list
 ```
-str_list = [str(i) for str_list in input().split()] 
-n_list = [int(i) for n_list in input().split()] 
+str_list = input().split()
+int_list = list(map(int,input().split()))
 ```
 
 * n回の繰り返しで複数の文字列を取得しながら処理
