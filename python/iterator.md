@@ -7,7 +7,11 @@
 list = []
 ```
 
-
+リストの一部の値のみに操作を行う ⇒ enumrateを使う
+```
+for i, v in enumerate(l[s:e]):
+    l[i] = v //操作
+```
 
 ## dict
 
