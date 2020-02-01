@@ -52,3 +52,8 @@ print (n) → n の中身
 print ('test',str) → test という文字列に続いて str の中身
 print (a+b,str) → aとbの和に続いて str の中身
 ```
+
+リストの内容をスペース区切りで出力する
+```
+print(' '.join(map(str, a_list)))
+```
