@@ -3,6 +3,17 @@
 
 ## イディオム
 
+### shebang & magic comment
+
+```
+#!/usr/bin/env python3
+# coding: utf-8
+```
+
+なお、PEP-8では非推奨なのでそのうち書くのやめる  
+https://pep8-ja.readthedocs.io/ja/latest/#id12  
+
+
 ### リスト内包表記によるリスト作成
 
 ```
@@ -18,6 +29,10 @@ squares = [x**2 for x in range(10)]
 ```
 
 ## 関数
+
+### 奇数偶数判定
+
+### 素数判定
 
 ### 約数のリストを返す
 
