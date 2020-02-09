@@ -48,12 +48,21 @@ for _ in range(n):
 ## 標準出力
 
 ```
-print (n) → n の中身
-print ('test',str) → test という文字列に続いて str の中身
-print (a+b,str) → aとbの和に続いて str の中身
-```
+print (n)
+ → n を出力
 
-リストの内容をスペース区切りで出力する
-```
+print ('test', str)
+ → test という文字列に続いて str の中身
+
+print (a+b, str)
+ → aとbの和に続いて str の中身
+
+print ("x"*n)
+ → xをn個続けて出力する
+
+print (sum(list[i:i+n]))
+ → list[i:i+1]の要素の和を出力
+
 print(' '.join(map(str, a_list)))
+ → リストの要素をスペース区切りで出力する。末尾にはスペースが入らず、改行される
 ```
