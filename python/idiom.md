@@ -28,9 +28,48 @@ squares = [x**2 for x in range(10)]
  -> [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 ```
 
+### 三項演算子
+
+```
+if n == 10:
+    x = "OK"
+else :
+    x = "NG"
+```
+は
+```
+x = "OK" if n == 10 else "NG"
+```
+と書ける。
+
+奇数なら "even" 偶数なら "odd" を出力する
+```
+n = int(input())
+print ("even") if n%2 == 0 else print ("odd")
+```
+
 ## 関数
 
-### 奇数偶数判定
+### 偶数ならTRUEを返す
+
+```
+def isEven (x:int):
+    return TRUE if x%2 == 0 else return FALSE
+```
+
+### 奇数ならTRUEを返す
+
+```
+def isOdd (x:int):
+    return TRUE if x%2 == 1 else return FALSE
+```
+
+### 偶数か奇数かを返す
+
+```
+def even_or_odd (x:int):
+    return "Even" if x%2 == 0 else return "Odd"
+```
 
 ### 素数判定
 
@@ -48,4 +87,3 @@ def divs(n:int):
     # divs.sort()
     return divs
 ```
-
