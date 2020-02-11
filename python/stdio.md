@@ -45,6 +45,21 @@ for _ in range(n):
     # 処理...
 ```
 
+* 0埋めした a*b の2次元配列を作る
+```
+a, b = map(int, input().split())
+arr = [[0 for i in range(a)] for j in range(b)]
+```
+
+* n行の2次元配列（1行当たりの要素数に制約なし）
+```
+n = int(input())
+grid = []
+for _ in range(n):
+    array = list(map(int, input().strip().split()))
+    grid.append(array)
+```
+
 ## 標準出力
 
 ```
