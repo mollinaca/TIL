@@ -48,6 +48,13 @@ n = int(input())
 print ("even") if n%2 == 0 else print ("odd")
 ```
 
+### 配列から要素が最大値の値を取り出す(pop)
+
+```
+l.pop(l.index(max(l)))
+```
+※破壊的操作であることに注意
+
 ## 関数
 
 ### 偶数ならTRUEを返す
