@@ -78,6 +78,38 @@ def even_or_odd (x:int):
     return "Even" if x%2 == 0 else return "Odd"
 ```
 
+### 素数のリストを作る
+
+エラトステネスの篩による実装
+
+```
+import math
+def eratosthenes(limit):
+    A = [i for i in range(2, limit+1)]
+    P = []
+    
+    while True:
+        prime = min(A)
+        
+        if prime > math.sqrt(limit):
+            break
+            
+        P.append(prime)
+            
+        i = 0
+        while i < len(A):
+            if A[i] % prime == 0:
+                A.pop(i)
+                continue
+            i += 1
+            
+    for a in A:
+        P.append(a)
+            
+    return P
+```
+素数のリスト P を返す
+
 ### 素数判定
 
 ### IPアドレスのフォーマットかどうか
