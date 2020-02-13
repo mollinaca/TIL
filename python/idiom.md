@@ -80,6 +80,20 @@ def even_or_odd (x:int):
 
 ### 素数判定
 
+### IPアドレスのフォーマットかどうか
+
+IPv4アドレスのフォーマットであるかどうか、のみを考える
+つまり、 0.0.0.0 ~ 255.255.255.255 の間であればよい※実際に存在しうるIPv4アドレスかどうかまでは考慮しない
+
+```
+import re
+def isIpv4addressFormat (x:str):
+    ※ To be written...
+```
+
+https://qiita.com/mklot/items/dc5826c8b610e31275cc
+https://qiita.com/dongri/items/2a0a18e253eb5bf9edba#python
+
 ### 約数のリストを返す
 
 ```divs.py
