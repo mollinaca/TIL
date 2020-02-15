@@ -110,7 +110,6 @@ def eratosthenes(limit):
 ```
 素数のリスト P を返す
 
-### 素数判定
 
 ### IPアドレスのフォーマットかどうか
 
@@ -139,4 +138,14 @@ def divs(n:int):
 
     # divs.sort()
     return divs
+```
+
+### 二つの文字列がアナグラムかどうか
+
+ソートして一致すればアナグラムである
+```
+def is_anagram(test:str original:str):
+    if sorted(test) == sorted(original):
+        return true
+    return false
 ```
