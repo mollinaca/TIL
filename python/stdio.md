@@ -75,9 +75,14 @@ print (a+b, str)
 print ("x"*n)
  → xをn個続けて出力する
 
+print (''.join(sorted(x)))
+文字列をソートして文字列として出力する
+joinをしないと、sortedの結果のリストで1文字ずつリストの要素として出力される
+
 print (sum(list[i:i+n]))
  → list[i:i+1]の要素の和を出力
 
 print(' '.join(map(str, a_list)))
  → リストの要素をスペース区切りで出力する。末尾にはスペースが入らず、改行される
 ```
+
