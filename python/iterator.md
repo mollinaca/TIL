@@ -20,6 +20,11 @@ dict = {}
 ```
 
 ```
+dict{key} = value
+```
+ -> dictに key,value を add する
+
+```
 for k in d:
     print(k)
 ```
