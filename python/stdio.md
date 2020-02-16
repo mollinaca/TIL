@@ -28,6 +28,7 @@ a, b = map(int, input().split())
 ```
 n = int(input())
 d_list = [int(input()) for d_list in range(n)]
+l = [input() for i in range(n)]
 ```
 
 * 個数がわからない → list
