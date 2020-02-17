@@ -82,10 +82,17 @@ d_list = [int(input()) for d_list in range(n)]
 ```
 
 ```
-count = len([x for x in data if x % 3 == 0]) # 3の倍数をカウント
+count = len([x for x in data if x < 0]) # 負の数をカウント
+count = len([x for x in data if x == 0]) # 0の数をカウント
+count = len([x for x in data if x > 0]) # 正の数をカウント
+count = len([x for x in data if x%3 == 0]) # 3の倍数をカウント
 ```
 
+数値が入ったリスト l から、負の数のみを抽出したリストを作る
 ```
+l_minus = [i for i in l if i < 0]
+```
+
 d = {'key1': 'aaa', 'key2': 'aaa', 'key3': 'bbb'}
 value = d['key1']
 print(value)
