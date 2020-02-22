@@ -165,3 +165,15 @@ http://w3e.kanazawa-it.ac.jp/math/category/kakuritu/kakuritu/henkan-tex.cgi?targ
 def ex(p:int):
     return (1+p)/2
 ```
+
+### 10進数からN進数へ基数変換したら何桁になる？
+
+つまり、元の数を何回Nで割れるかということ
+```
+def n_keta(n:int, k:int):
+    while True:
+        n = n//k
+        count += 1
+        if n == 0:
+            return count
+```
