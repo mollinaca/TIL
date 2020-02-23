@@ -12,3 +12,12 @@
 ```
 ![math](./math/math_20200204.gif)
 
+## 1 から P までの P 種類の目が等確率で出るサイコロの出目の期待値
+
+そもそも期待値
+http://w3e.kanazawa-it.ac.jp/math/category/kakuritu/kakuritu/henkan-tex.cgi?target=/math/category/kakuritu/kakuritu/kitaiti-no-teigi.html
+
+```
+def ex(p:int):
+    return (1+p)/2
+```
