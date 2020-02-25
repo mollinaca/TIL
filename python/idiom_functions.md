@@ -40,6 +40,17 @@ def divs(n:int):
 
 ## 素数かどうか判定する
 
+O(n)
+```
+def isPrime(x:int):
+    for i in range(2,n):
+        if x%i == 0:
+            return False
+    else:
+        return True
+```
+
+O(sqrt(n))
 ```
 import math
 
