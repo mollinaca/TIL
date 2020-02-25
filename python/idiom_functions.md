@@ -68,6 +68,25 @@ def isPrime(x:int):
         return True
 ```
 
+O(sqrt(n)) math を使わない
+```
+def isPrime(x:int):
+    if x < 2 or x == 9:
+        return False
+    if x == 2:
+        return True
+    if x%2 == 0:
+        return False
+    i = 2
+    while True:
+        i += 1
+        if x%i == 0:
+            print (i)
+            return False
+        if i*i >= x:
+            return True
+```
+
 ## 素数のリストを作る
 
 エラトステネスの篩による実装
