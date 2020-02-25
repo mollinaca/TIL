@@ -38,6 +38,25 @@ def divs(n:int):
     return divs
 ```
 
+## 素数かどうか判定する
+
+```
+import math
+
+def isPrime(x:int):
+    if x < 2 or x == 9:
+        return False
+    if x == 2:
+        return True
+    if x%2 == 0:
+        return False
+    for i in range(3,int(math.sqrt(x)),2):
+        if x%i == 0:
+            return False
+    else:
+        return True
+```
+
 ## 素数のリストを作る
 
 エラトステネスの篩による実装
