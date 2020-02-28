@@ -38,6 +38,29 @@ def divs(n:int):
     return divs
 ```
 
+## 最大公約数
+
+python3.5以前なら fractions.gcd()
+https://docs.python.org/ja/3/library/fractions.html#fractions.gcd
+python3.5以降なら math.gcd()
+https://docs.python.org/ja/3/library/math.html#math.gcd
+
+```
+import fractions
+gcd(a,b)
+```
+
+複数の値の最大公約数を求める場合は、reduce()を使って以下のように再帰的に求める
+```
+import math
+from functools import reduce
+
+def gcd_list(numbers):
+    return reduce(math.gcd, numbers)
+```
+numbersは数値が入ったリスト
+
+
 ## 素数かどうか判定する
 
 O(n)
