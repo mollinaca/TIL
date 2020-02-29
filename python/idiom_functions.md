@@ -78,7 +78,6 @@ def lcm_list(numbers):
     return reduce(lcm, numbers)
 ```
 
-
 ## 素数かどうか判定する
 
 O(n)
@@ -159,6 +158,18 @@ def eratosthenes(limit):
     return P
 ```
 素数のリスト P を返す
+
+## 桁和
+
+```
+def digsum(a:int):
+    res = 0
+    while a>0:
+        res += a%10
+        a //= 10
+    return res
+```
+桁数は `len(a)` のみでおｋ
 
 ## 二つの文字列がアナグラムかどうか
 
