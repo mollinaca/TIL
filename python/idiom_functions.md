@@ -60,6 +60,24 @@ def gcd_list(numbers):
 ```
 numbersは数値が入ったリスト
 
+## 最小公倍数
+
+
+```
+import factions/math
+def lcm(a:int,b:int):
+    return a // math.gcd(a, b) * b
+```
+
+複数の値の最小公倍数
+```
+import math
+from functools import reduce
+
+def lcm_list(numbers):
+    return reduce(lcm, numbers)
+```
+
 
 ## 素数かどうか判定する
 
