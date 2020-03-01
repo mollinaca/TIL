@@ -1,6 +1,7 @@
 
-# よく使う関数群
+# よく使う関数群とか
 
+# 数学っぽいの
 
 ## 偶数ならTRUEを返す
 
@@ -171,18 +172,40 @@ def digsum(a:int):
 ```
 桁数は `len(a)` のみでおｋ
 
-### 階乗
+## 階乗
 
 ```
 import math
 print (math.factorial(n))
 ```
 
-### 累乗
+## 累乗
 ```
 pow(x,y,z)
 # xをy乗してzで割ったあまり
 # zはオプション
+```
+
+## 10進数からN進数へ基数変換したら何桁になる？
+
+つまり、元の数を何回Nで割れるかということ
+```
+def n_keta(n:int, k:int):
+    while True:
+        n = n//k
+        count += 1
+        if n == 0:
+            return count
+```
+
+# 文字列操作っぽいの
+
+## 文字列中に出現する特定文字のカウント
+
+https://python-reference.readthedocs.io/en/latest/docs/str/count.html
+count() を使う
+```
+print (input().count())
 ```
 
 ## 二つの文字列がアナグラムかどうか
@@ -195,15 +218,4 @@ def is_anagram(test:str original:str):
     return false
 ```
 
-### 10進数からN進数へ基数変換したら何桁になる？
-
-つまり、元の数を何回Nで割れるかということ
-```
-def n_keta(n:int, k:int):
-    while True:
-        n = n//k
-        count += 1
-        if n == 0:
-            return count
-```
 
