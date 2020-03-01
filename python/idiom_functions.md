@@ -171,6 +171,20 @@ def digsum(a:int):
 ```
 桁数は `len(a)` のみでおｋ
 
+### 階乗
+
+```
+import math
+print (math.factorial(n))
+```
+
+### 累乗
+```
+pow(x,y,z)
+# xをy乗してzで割ったあまり
+# zはオプション
+```
+
 ## 二つの文字列がアナグラムかどうか
 
 ソートして一致すればアナグラムである
@@ -192,3 +206,4 @@ def n_keta(n:int, k:int):
         if n == 0:
             return count
 ```
+
