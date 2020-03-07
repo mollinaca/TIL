@@ -100,6 +100,11 @@ count = len([x for x in data if x%3 == 0]) # 3の倍数をカウント
 l_minus = [i for i in l if i < 0]
 ```
 
+文字列が入ったリスト l から、数値型のリストに変換する
+```
+l_i = [int(i) for i in l]
+```
+
 d = {'key1': 'aaa', 'key2': 'aaa', 'key3': 'bbb'}
 value = d['key1']
 print(value)
