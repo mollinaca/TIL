@@ -36,3 +36,15 @@ https://note.nkmk.me/python-collections-deque/
 スタック(LIFO)として使う場合は、プッシュとして `append()`、ポップとして `pop()`   
 を使う  
 
+## itertools
+
+イテレータを生成する  
+https://docs.python.org/ja/3/library/itertools.html  
+
+### product()
+
+nestしたループを作る
+https://docs.python.org/ja/3/library/itertools.html#itertools.product
+
+`product('ABCD', repeat=2)`
+# => AA AB AC AD BA BB BC BD CA CB CC CD DA DB DC DD
