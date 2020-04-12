@@ -37,6 +37,20 @@ str_list = input().split()
 int_list = list(map(int,input().split()))
 ```
 
+* 何行かわからない標準入力を受け取る
+```
+import sys
+s = []
+for line in sys.stdin:
+    s.append (list(line.rstrip()))
+```
+stdinのEOFを検知して終了するため、CLI実行でキーボード入力だと入力の終了が（たぶん）できない。  
+入力する文字列をテキストファイルに出力して、リダイレクトで流しこんで実行する
+```
+./input.py < input.txt
+```
+http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_8_C  
+
 * n回の繰り返しで複数の文字列を取得しながら処理
 ```
 n = int(input())
