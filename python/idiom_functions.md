@@ -160,6 +160,32 @@ def eratosthenes(limit):
 ```
 素数のリスト P を返す
 
+## 素因数分解
+
+```
+def prime_factorize(n):
+    ans = []
+    if n == 1:
+        ans.append(1)
+        return ans
+
+    while n % 2 == 0:
+        ans.append(2)
+        n //= 2
+    f = 3
+
+    while f * f <= n:
+        if n % f == 0:
+            ans.append(f)
+            n //= f
+        else:
+            f += 2
+    if n != 1:
+        ans.append(n)
+
+    return ans
+```
+
 ## 桁和
 
 ```
