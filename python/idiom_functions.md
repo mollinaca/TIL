@@ -114,7 +114,7 @@ O(sqrt(n)) math を使わない
 def isPrime(x:int):
     if x < 2 or x == 9:
         return False
-    if x == 2:
+    if x == 2 or x == 3:
         return True
     if x%2 == 0:
         return False
@@ -122,9 +122,8 @@ def isPrime(x:int):
     while True:
         i += 1
         if x%i == 0:
-            print (i)
             return False
-        if i*i >= x:
+        if x <= i**2 :
             return True
 ```
 
