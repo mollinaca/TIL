@@ -110,12 +110,15 @@ l_minus = [i for i in l if i < 0]
 l_i = [int(i) for i in l]
 ```
 
+dict から、keyのvaleuを取り出す
+```
 d = {'key1': 'aaa', 'key2': 'aaa', 'key3': 'bbb'}
 value = d['key1']
 print(value)
  -> aaa
 ```
 
+dictから、valueに等しいkeyを取り出す
 ```
 keys = [k for k, v in d.items() if v == 'aaa']
 print(keys)
@@ -130,6 +133,7 @@ print(keys)
  -> []
 ```
 
+dictから、条件を満たすvalueをもつkeyを取り出す
 ```
 d_num = {'key1': 1, 'key2': 2, 'key3': 3}
 
