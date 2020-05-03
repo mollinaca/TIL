@@ -93,20 +93,27 @@ print (list(d.values()).count('aaa'))
 
 ## リスト内包表記
 
-`[式 for 任意の変数名 in イテラブルオブジェクト]`
-`[式 for 任意の変数名 in イテラブルオブジェクト if 条件式]`
-`[真のときの値 if 条件式 else 偽のときの値 for 任意の変数名 in イテラブルオブジェクト]`
+`[式 for 任意の変数名 in イテラブルオブジェクト]`  
+`[式 for 任意の変数名 in イテラブルオブジェクト if 条件式]`  
+`[真のときの値 if 条件式 else 偽のときの値 for 任意の変数名 in イテラブルオブジェクト]`  
 
 
 ```
-d_list = [int(input()) for d_list in range(n)]
+l = [int(input()) for l in range(n)]
 ```
+ -> 1行ずつ合計n行の整数型の入力を受け取りリストlにしまう
 
 ```
-count = len([x for x in data if x < 0]) # 負の数をカウント
-count = len([x for x in data if x == 0]) # 0の数をカウント
-count = len([x for x in data if x > 0]) # 正の数をカウント
-count = len([x for x in data if x%3 == 0]) # 3の倍数をカウント
+l = [0 for l in range(n)]
+```
+ -> 0で初期化したn個の要素数のリストを作る
+
+
+```
+count = len([x for x in d if x < 0]) # 負の数をカウント
+count = len([x for x in d if x == 0]) # 0の数をカウント
+count = len([x for x in d if x > 0]) # 正の数をカウント
+count = len([x for x in d if x%3 == 0]) # 3の倍数をカウント
 ```
 
 数値が入ったリスト l から、負の数のみを抽出したリストを作る
