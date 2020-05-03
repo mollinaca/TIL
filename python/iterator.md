@@ -73,6 +73,11 @@ max_v = max(d.values())
  -> dict の value の最大値
 
 ```
+max_k = max(d, key=d.get)
+```
+ -> dict の value が最大となる key ※順序は保証されない任意の一つ
+
+```
 date_list = [k for k, v in bloom.items() if v == max(bloom.values())]
 ```
 dict: bloom の中で、要素の値が最大のもののリストを抽出する
