@@ -151,3 +151,10 @@ keys = [k for k, v in d_str.items() if v.endswith('com')]
 print(keys)
  -> ['key1', 'key3']
 ```
+
+dictから、特定の値に一致するvalueをもつkeyの数を数える
+```
+d = {'key1': 'aaa', 'key2': 'aaa', 'key3': 'bbb'}
+print (list(d.values()).count('aaa'))
+ -> 2
+```
