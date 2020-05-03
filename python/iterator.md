@@ -82,6 +82,15 @@ date_list = [k for k, v in bloom.items() if v == max(bloom.values())]
 ```
 dict: bloom の中で、要素の値が最大のもののリストを抽出する
 
+
+dictから、特定の値に一致するvalueをもつkeyの数を数える
+```
+d = {'key1': 'aaa', 'key2': 'aaa', 'key3': 'bbb'}
+print (list(d.values()).count('aaa'))
+```
+ -> 2
+
+
 ## リスト内包表記
 
 `[式 for 任意の変数名 in イテラブルオブジェクト]`
@@ -150,11 +159,4 @@ d_str = {'key1': 'aaa@xxx.com', 'key2': 'bbb@yyy.net', 'key3': 'ccc@zzz.com'}
 keys = [k for k, v in d_str.items() if v.endswith('com')]
 print(keys)
  -> ['key1', 'key3']
-```
-
-dictから、特定の値に一致するvalueをもつkeyの数を数える
-```
-d = {'key1': 'aaa', 'key2': 'aaa', 'key3': 'bbb'}
-print (list(d.values()).count('aaa'))
- -> 2
 ```
