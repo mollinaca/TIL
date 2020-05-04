@@ -21,3 +21,8 @@ http://w3e.kanazawa-it.ac.jp/math/category/kakuritu/kakuritu/henkan-tex.cgi?targ
 def ex(p:int):
     return (1+p)/2
 ```
+
+## 座標上の三角形の面積
+
+3点 (0,0),(a,b),(c,d) で構成される三角形の面積は、 |ad-bc|/2  
+3点 (x,y),(a,b),(c,d) で構成される三角形の面積は、 |(a-x)*(d-y)-(b-y)(c-x)|/2  
