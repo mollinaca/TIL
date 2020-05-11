@@ -48,3 +48,55 @@ https://docs.python.org/ja/3/library/itertools.html#itertools.product
 
 `product('ABCD', repeat=2)`
 # => AA AB AC AD BA BB BC BD CA CB CC CD DA DB DC DD
+
+### permutations()
+
+https://docs.python.org/ja/3/library/itertools.html#itertools.permutations  
+https://torina.top/detail/310/  
+
+```
+for i in itertools.permutations(['a', 'b', 'c']):
+    print(i)
+
+('a', 'b', 'c')
+('a', 'c', 'b')
+('b', 'a', 'c')
+('b', 'c', 'a')
+('c', 'a', 'b')
+('c', 'b', 'a')
+```
+
+```
+for i in itertools.permutations(range(3)):  # 0, 1, 2
+    print(i)
+
+(0, 1, 2)
+(0, 2, 1)
+(1, 0, 2)
+(1, 2, 0)
+(2, 0, 1)
+(2, 1, 0)
+```
+
+```
+origin_list = ['a', 'b', 'c']
+for i, _ in enumerate(origin_list, 1):     
+    for j in itertools.permutations(origin_list, r=i):  # rには1、2、3と渡される
+        print(j)
+
+('a',)
+('b',)
+('c',)
+('a', 'b')
+('a', 'c')
+('b', 'a')
+('b', 'c')
+('c', 'a')
+('c', 'b')
+('a', 'b', 'c')
+('a', 'c', 'b')
+('b', 'a', 'c')
+('b', 'c', 'a')
+('c', 'a', 'b')
+('c', 'b', 'a')
+```
