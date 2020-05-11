@@ -104,6 +104,12 @@ l = [int(input()) for l in range(n)]
  -> 1行ずつ合計n行の整数型の入力を受け取りリストlにしまう
 
 ```
+l = list(map(int,input().split()))
+A = ([i for i in l if i > 0])
+```
+ → 標準入力からスペース区切りの数字列を受け取り、そこから整数のみのリストを作る  
+
+```
 l = [0 for l in range(n)]
 ```
  -> 0で初期化したn個の要素数のリストを作る
