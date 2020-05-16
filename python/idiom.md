@@ -78,6 +78,17 @@ n = int(input())
 print (sum(list(map(int, str(n)))))
 ```
 
+### いろんなリスト
+
+```
+[chr(i) for i in range(97, 97+26)] # 小文字
+[chr(i) for i in range(65, 65+26)] # 大文字
+[chr(i) for i in range(48, 48+10)] # 半角数字
+[chr(i) for i in range(12353, 12436)] # ひらがな
+[chr(i) for i in range(12449, 12532+1)] # カタカナ
+[chr(i) for i in range(65296, 65296+10)] # 常用漢字
+```
+
 ### IPアドレスのフォーマットかどうか
 
 IPv4アドレスのフォーマットであるかどうか、のみを考える
