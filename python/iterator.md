@@ -114,6 +114,10 @@ l = [0 for l in range(n)]
 ```
  -> 0で初期化したn個の要素数のリストを作る
 
+```
+l = [[0 for i in range(w)] for i in range(h)]
+```
+ -> h×w の 0 埋めされた2次元配列を生成  
 
 ```
 count = len([x for x in d if x < 0]) # 負の数をカウント
