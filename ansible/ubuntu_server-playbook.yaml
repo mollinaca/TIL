@@ -1,0 +1,23 @@
+---
+- hosts: chromebook1
+  become: yes
+  tasks:
+    - name: apt update
+      apt: 
+        update_cache: 'yes'
+
+    - name: apt upgrade
+      apt:
+        upgrade: 'yes'
+
+    - name: apt-get install modules
+      apt:
+        name:
+          - git
+          - vim
+          - lm-sensors
+          - smokeping
+
+    - name: copy smokeping/config.d/Probes
+      copy:
+        src: 
