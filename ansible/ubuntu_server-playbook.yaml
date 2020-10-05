@@ -2,6 +2,10 @@
 - hosts: chromebook1
   become: yes
   tasks:
+    - name: set timezone to Asia/Tokyo
+      timezone:
+        name: Asia/Tokyo
+
     - name: apt update
       apt: 
         update_cache: 'yes'
@@ -10,6 +14,32 @@
       apt:
         upgrade: 'yes'
 
+    - name: blockinfile to .bashrc
+      blockinfile:
+        path: /root/.bashrc
+        create: 'yes'
+        marker: "# {mark} ANSIBLE Fish-shell basic setup."
+        block: "{{item}}"
+      with_file:
+        - ubuntu_server/dotfiles/.bashrc
+    
+    - name: add .bash_hstn
+      copy:
+        src: ubuntu_server/dotfiles/.bash_hstn
+        dest: /root/.bash_hstn
+
+    - name: add .vimrc
+      copy:
+        src: ubuntu_server/dotfiles/.vimrc
+        dest: /root/.vimrc
+    
+    - name: add .vimrc to sho
+      copy:
+        src: ubuntu_server/dotfiles/.vimrc
+        dest: /home/sho/.vimrc
+        owner: 'sho'
+        group: 'sho'
+
     - name: apt-get install modules
       apt:
         name:
@@ -17,7 +47,33 @@
           - vim
           - lm-sensors
           - smokeping
+          - fping
 
     - name: copy smokeping/config.d/Probes
       copy:
-        src: 
+        src: ubuntu_server/smokeping/config.d/Probes
+        dest: /etc/smokeping/config.d/Probes
+        backup: 'yes'
+
+    - name: copy smokeping/config.d/Targets
+      copy:
+        src: ubuntu_server/smokeping/config.d/Targets
+        dest: /etc/smokeping/config.d/Targets
+        backup: 'yes'
+    
+    - name: restart smokeping
+      systemd:
+        name: smokeping.service
+        state: restarted
+        enabled: 'yes'
+
+    - name: apt-get install apache2
+      apt:
+        name:
+          - apache2
+    
+    - name: restart apache2
+      systemd:
+        name: apache2.service
+        state: restarted
+        enabled: 'yes'
