@@ -40,7 +40,7 @@
         owner: 'sho'
         group: 'sho'
 
-    - name: apt-get install modules
+    - name: apt-get install modules 1
       apt:
         name:
           - git
@@ -48,6 +48,18 @@
           - lm-sensors
           - smokeping
           - fping
+
+    - name: apt-get install modules 2
+      apt:
+        name:
+          - zlib1g-dev
+          - gcc
+          - make
+          - autoconf
+          - autogen
+          - automake
+          - pkg-config
+          - uuid-dev
 
     - name: copy smokeping/config.d/Probes
       copy:
@@ -57,7 +69,7 @@
 
     - name: copy smokeping/config.d/Targets
       copy:
-        src: ubuntu_server/smokeping/config.d/Targets
+        src: ./ubuntu_server/smokeping/config.d/Targets
         dest: /etc/smokeping/config.d/Targets
         backup: 'yes'
     
@@ -71,9 +83,47 @@
       apt:
         name:
           - apache2
-    
+
+    - name: delete unuse apache2 conf
+      shell: rm -f /etc/apache2/conf-available/*
+
+    - name: disable unuse apache2 conf symlinks
+      shell: rm -f /etc/apache2/conf-enabled/*
+
+    - name: copy apache2 conf
+      copy:
+        src: ./ubuntu_server/apache2/etc/apache2/conf-available/{{ item }}
+        dest: /etc/apache2/conf-available/
+      with_items:
+        - security.conf
+        - server-cgi-bin.conf
+        - smokeping.conf
+
+    - name: enable apache2 conf
+      shell: ln -s /etc/apache2/conf-available/{{ item }} /etc/apache2/conf-enabled/{{ item }}
+      with_items:
+        - security.conf
+        - server-cgi-bin.conf
+        - smokeping.conf
+
     - name: restart apache2
       systemd:
         name: apache2.service
+        state: restarted
+        enabled: 'yes'
+
+    - name: apt-get install netdata
+      apt:
+        name:
+        - netdata
+    
+    - name: copy netdata/etc/netdata/netdata.conf
+      copy:
+        src: ./ubuntu_server/netdata/etc/netdata/netdata.conf
+        dest: /etc/netdata/netdata.conf
+
+    - name: restart netdata
+      systemd:
+        name: netdata.service
         state: restarted
         enabled: 'yes'
