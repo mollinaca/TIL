@@ -86,9 +86,13 @@
 
     - name: delete unuse apache2 conf
       shell: rm -f /etc/apache2/conf-available/*
+      args:
+        warn: false
 
     - name: disable unuse apache2 conf symlinks
       shell: rm -f /etc/apache2/conf-enabled/*
+      args:
+        warn: false
 
     - name: copy apache2 conf
       copy:
@@ -101,6 +105,8 @@
 
     - name: enable apache2 conf
       shell: ln -s /etc/apache2/conf-available/{{ item }} /etc/apache2/conf-enabled/{{ item }}
+      args:
+        warn: false
       with_items:
         - security.conf
         - server-cgi-bin.conf
