@@ -21,24 +21,29 @@
         marker: "# {mark} ANSIBLE Fish-shell basic setup."
         block: "{{item}}"
       with_file:
-        - ubuntu_server/dotfiles/.bashrc
+        - ./ubuntu_server/dotfiles/.bashrc
     
     - name: add .bash_hstn
       copy:
-        src: ubuntu_server/dotfiles/.bash_hstn
+        src: ./ubuntu_server/dotfiles/.bash_hstn
         dest: /root/.bash_hstn
 
     - name: add .vimrc
       copy:
-        src: ubuntu_server/dotfiles/.vimrc
+        src: ./ubuntu_server/dotfiles/.vimrc
         dest: /root/.vimrc
     
     - name: add .vimrc to sho
       copy:
-        src: ubuntu_server/dotfiles/.vimrc
+        src: ./ubuntu_server/dotfiles/.vimrc
         dest: /home/sho/.vimrc
         owner: 'sho'
         group: 'sho'
+
+    - name: modify rsyslog config
+      copy:
+        src: ./ubuntu_server/etc/rsyslog/50-default.conf
+        dest: /etc/rsyslog.d/50-default.conf
 
     - name: apt-get install modules 1
       apt:
@@ -135,6 +140,20 @@
       copy:
         src: ./ubuntu_server/netdata/etc/netdata/netdata.conf
         dest: /etc/netdata/netdata.conf
+
+    - name: create directory netdata.service.d
+      file:
+        path: /etc/systemd/system/netdata.service.d
+        state: directory
+
+    - name: copy etc/systemd/system/netdata.service.d/override.conf
+      copy:
+        src: ./ubuntu_server/etc/systemd/system/netdata.service.d/override.conf
+        dest: /etc/systemd/system/netdata.service.d/override.conf
+        # https://github.com/netdata/netdata/issues/8820 
+
+    - name: daemon-reload for netdata
+      shell: systemctl daemon-reload
 
     - name: restart netdata
       systemd:
