@@ -53,6 +53,7 @@
           - lm-sensors
           - smokeping
           - fping
+          - mlocate
 
     - name: apt-get install modules 2
       apt:
