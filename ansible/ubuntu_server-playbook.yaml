@@ -94,7 +94,7 @@
       args:
         warn: false
 
-    - name: copy apache2 conf
+    - name: copy apache2 conf-available
       copy:
         src: ./ubuntu_server/apache2/etc/apache2/conf-available/{{ item }}
         dest: /etc/apache2/conf-available/
@@ -103,7 +103,7 @@
         - server-cgi-bin.conf
         - smokeping.conf
 
-    - name: enable apache2 conf
+    - name: enable apache2 conf-available
       shell: ln -s /etc/apache2/conf-available/{{ item }} /etc/apache2/conf-enabled/{{ item }}
       args:
         warn: false
@@ -111,6 +111,14 @@
         - security.conf
         - server-cgi-bin.conf
         - smokeping.conf
+
+    - name: copy apache2 sites-available
+      copy:
+        src: ./ubuntu_server/apache2/etc/apache2/sites-available/{{ item }}
+        dest: /etc/apache2/sites-available/
+      with_items:
+        - 000-default.conf
+        - default-ssl.conf
 
     - name: restart apache2
       systemd:
