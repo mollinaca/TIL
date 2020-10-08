@@ -161,3 +161,16 @@
         name: netdata.service
         state: restarted
         enabled: 'yes'
+
+    - name: create tools dir
+      file:
+        path: /root/tools
+        state: directory
+        owner: root
+        group: root
+
+    - name: git clone hstn-family-script
+      git:
+        repo: 'https://github.com/mollinaca/hstn-family-scripts'
+        dest: /root/tools/hstn-family-scripts
+        clone: 'no'
