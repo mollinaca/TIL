@@ -70,6 +70,23 @@ $ ssh -i .ssh/<PrivateKeyFile> root@<IPaddr> -> ログインできることを�
 
 上記までで、一般ユーザ/rootユーザでのsshkeyでのログインと固定IPアドレスの設定が完了  
 
+## 設定
+
+### visudo
+
+```
+# update-alternatives --config editor -> vim.basic を選択
+```
+```
+visudo
+
+
+```
+
+
+
+
+
 # Ansibel
 
 ToBeWritten...

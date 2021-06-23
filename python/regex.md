@@ -26,4 +26,3 @@ if re.fullmatch(r"(dream|dreamer|erase|eraser)+", s):
 else:
     print("NO")
 ```
-

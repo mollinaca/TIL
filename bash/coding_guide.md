@@ -9,7 +9,7 @@
 
 ## templete
 
-```
+```bash:templete.sh
 #!/bin/bash
 # Description :
 #  This is ShellScript templete
